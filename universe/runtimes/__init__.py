@@ -4,7 +4,7 @@ import yaml
 from universe.runtimes.registration import register_runtime
 
 with open(os.path.join(os.path.dirname(__file__), '../runtimes.yml')) as f:
-    spec = yaml.load(f)
+    spec = yaml.safe_load(f)
 
 # If you have a local repo, do something like
 # export OPENAI_DOCKER_REPO=docker.openai.com  (this one only for openai folks)
